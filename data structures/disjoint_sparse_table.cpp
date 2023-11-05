@@ -18,7 +18,7 @@ struct dsparse_table{
             }
       }
 
-      T get(int l, int r){
+      T get(int l, int r){ // get result on [l, r]
             int h = __lg(l ^ (r + 1));
             return op(sp[h][l], sp[h][r + 1]);
       }
