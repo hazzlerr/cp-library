@@ -13,7 +13,7 @@ struct sparse_table{
             }
       }
  
-      T get(int l, int r){
+      T get(int l, int r){ // get result on [l, r]
             int z = __lg(r - l + 1);
             return op(sp[z][l], sp[z][r - (1 << z) + 1]);
       }
